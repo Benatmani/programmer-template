@@ -1,0 +1,38 @@
+$main-color:#ec5252;
+$dark:#000;
+$white:#fff;
+$secondary:#232025;
+$bg-color : rgba(#00FF85 ,0.08);
+
+
+
+@mixin flex ($direction : row , $justify : space-between , $align : center, $gap : 30px , $wrap : wrap){
+  display: flex;
+  flex-direction: #{$direction};
+  justify-content: #{$justify};
+  align-items: #{$align};
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+@mixin grid ($width-item : 250px,$row-gap : 30px,$column-gap:30px){
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax($width-item,1fr));
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+
+$base-size:16;
+$ratio:1.3;
+
+p,a,span{
+    font-size:#{$base-size}px;
+}
+@for $i from 4 through 1{
+    $base-size : $base-size * $ratio;
+    h#{$i} {
+        font-size : #{$base-size}px;
+    }
+}
+
+

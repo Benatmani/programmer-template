@@ -1,0 +1,138 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet" , href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" , media="all") 
+        title Document
+    body
+        header
+            mixin title_top(span_,h4_,p_)
+                .title_top
+                    span= span_
+                    h4= h4_
+                    p= p_
+
+            .container
+                .header-top
+                    .logo
+                        h2 LOGO
+                    .bars
+                        div
+                        div
+                        div
+                .header-bottom
+                    .content
+                        h2 Access 2500+ Online Tutorial from 140+ Top Instructor.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        a(href="#" class="btn") Get Started
+        section.services
+            .container
+                mixin service (tit,subtitle)
+                    .service
+                        .icon
+                            img(src="image/shape 1.png")
+                        h4= tit
+                        span= subtitle
+                .service_          
+                    +service("Web Developement","(3 Listing)")
+                    +service("Programme Language","(3 Listing)")
+                    +service("Game Development","(3 Listing)")
+                    +service("Mobile Apps","(3 Listing)")
+        //- title_top
+        +title_top("Take A Look To","Our Feature Toturial","Your code is tested as soon as you submit it, so you always know if you’re on the right track.")
+        //- Features
+        section.Feature
+            .container
+                .feature-grid
+                    mixin feature_box(imag,span1,span2,title_box,paragraph,span3,span4,span5)
+                        .featurebox.max-wid
+                            .imagebox
+                                img(src=imag alt="dfhdfbf")
+                            .content
+                                .header-span
+                                    span= span1
+                                    span= span2
+                                h4=title_box
+                                p= paragraph
+                                .footer-span
+                                    span= span3
+                                    span= span4
+                                    span= span5        
+                    +feature_box("image/nick-gavrilov-8pU-cOs5z3Q-unsplash.jpg","Programming Language","Jon Doe","Web Design","The ultimate planning solution forbusy women who want to reach their personal goals.","12 Lesson","10 Students","11 Weeks")
+                    +feature_box("image/tobias-roder-bZSapOQA_OU-unsplash.jpg","Programming Language","Jon Doe","Java Programming","The ultimate planning solution forbusy women who want to reach their personal goals.","12 Lesson","10 Students","11 Weeks")
+                    +feature_box("image/dollar-gill-pJgIf6CfVkU-unsplash.jpg","Programming Language","Jon Doe","Machine Learning","The ultimate planning solution forbusy women who want to reach their personal goals.","12 Lesson","10 Students","11 Weeks")
+        //- Chosse
+        section.Chosse
+            .container
+                .contentbox
+                    .contentleft
+                        h4 Why Chosse Us
+                        p The ultimate planning solution forbusy women who want to reach their personal goals.
+                        mixin chosse(title_,paragraph)
+                            .contentflex
+                                .icon
+                                    img(src="image/shape 1.png")
+                                .contenttext
+                                    h5=title_
+                                    p=paragraph
+                        +chosse("Go At Your Own Space","The ultimate planning solution forbusy women who want to reach their personal goals.")            
+                        +chosse("Learn From Industry Experts","The ultimate planning solution forbusy women who want to reach their personal goals.")            
+                        +chosse("Learn On Your Schedule","The ultimate planning solution forbusy women who want to reach their personal goals.")            
+                    .contentright
+                        img(src="image/oguzhan-akdogan-qYMkkREOHa4-unsplash.jpg")
+        +title_top("TESTIMONIAL","What Our Students Have to Say","Apply your learning with real-world projects and test your knowledge with tailor-made quizzes")
+        section.TESTIMONIAL
+            .container
+                .testimonialflex
+                    mixin testimonial()
+                        .box
+                            .imagebox
+                            .content
+                                span="Jon Doe"
+                                span="CEO Company"
+                                p="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ea commodo consequat. "
+                    +testimonial()        
+                    +testimonial()
+        section.steps
+            .stepsgrid
+                mixin step(number,title_,paragraph)
+                    .boxcontent
+                        h4=number
+                        h5=title_
+                        p=paragraph
+                +step("01","Choose What to Learn","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")    
+                +step("02","Learn By Doing","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")    
+                +step("03","Get Instant Feedback","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")    
+                +step("04","Land Your Dream Job","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")
+        section.getstarted
+            +title_top("","Not Sure Where to Begin? No Need to Worry, We’ll Help You Make.","Because learning to code might be the easiest way to change your career.")
+            a(href="#" class="btn") Get Started
+        +title_top("FORM OUR BLOG","Latest News Form Our Blog","Apply your learning with real-world projects and test your knowledge with tailor-made quizzes.")
+        section.quastion
+            .container
+                .quastion-grid
+                    mixin quastion_box(imag,span1,span2,title_box,paragraph,span3,span4,span5)
+                        .quastionbox
+                            .imagebox
+                                img(src=imag alt="dfhdfbf")
+                            .content
+                                .header-span
+                                    span= span1
+                                    span= span2
+                                h4=title_box
+                                p= paragraph
+                                .footer-span
+                                    span= span3
+                                    span= span4
+                                    span= span5        
+                    +quastion_box("image/nick-gavrilov-8pU-cOs5z3Q-unsplash.jpg","Programming Language","Jon Doe","Web Design","The ultimate planning solution forbusy women who want to reach their personal goals.","12 Lesson","10 Students","11 Weeks")
+                    +quastion_box("image/tobias-roder-bZSapOQA_OU-unsplash.jpg","Programming Language","Jon Doe","Java Programming","The ultimate planning solution forbusy women who want to reach their personal goals.","12 Lesson","10 Students","11 Weeks")
+                a(href="#" class="btn btn1") View All
+        footer
+            .container
+                .logo
+                    h2 LOGO
+                p 2020 Copyrights & Protected            

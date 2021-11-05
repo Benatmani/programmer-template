@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+@import "style/_Compontent";
+@import "style/_Helpers.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    @media screen and(max-width: 767px ) {
+    $base-size:14;
+    p,a,span{
+        font-size:#{$base-size}px;
+    }
+    @for $i from 4 through 1{
+        $base-size : $base-size * $ratio;
+        h#{$i} {
+            font-size : #{$base-size}px;
+        }
+    }
+    }
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
+}
+.title_top{
+    max-width: 400px;
+    margin: 50px auto;
+    p,h4,span{
+        text-align:center;
+    }
+    span{
+        display:block;
+        color: $main-color;
+        text-transform: uppercase;
+    }
+    h4{
+        margin: 10px 0;
+    }
+
+}
+header{
+    background-image: url("image/nick-gavrilov-8pU-cOs5z3Q-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    color:$white;
+    .header-top{
+        @include flex();
+        /*Burger Menu*/
+        .bars{
+            width: 34px;
+            height: 34px;
+            cursor: pointer;
+            div{
+                transition: width 0.3s;
+                width: 100%;
+                height: 4px;
+                background-color: $white;
+                margin: 8px 0;
+                &:nth-child(2){
+                    width: 60%;
+                    right: 0;
+                    
+                }  
+            }
+            &:hover{
+                div{
+                    &:nth-child(2){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    /*Header Bottom*/
+    .header-bottom{
+        @include flex();
+        height: 500px;
+        .content{
+            h2{
+                max-width: 460px;
+            }
+            p{
+                margin: 20px 0;
+                max-width: 460px;
+            }
+        }
+    }
+}
+/*Services*/
+.services{
+    padding: 50px 0;
+    background-color: #f7f7f7;
+    .service_{
+        @include grid;
+        .service{
+            text-align: center;
+            .icon{
+                margin: auto;
+                line-height: 130px;
+                
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+.feature-grid{
+    @include flex($justify : center);
+    .featurebox{
+        width: 350px;
+        box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 4px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            transform: translateY(-20px);
+        }
+        .imagebox{
+                width: 350px;
+                height: 180px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+            }
+        }
+        .content{
+            padding: 20px;
+            .header-span{
+                margin: 20px 0;
+                span{
+                    &:last-child{
+                        margin-left: 20px;
+                    }
+                }
+            }
+            h4{
+                margin-bottom: 20px;
+            }
+            .footer-span{
+                padding:20px 0;
+                span{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+/*Choose*/
+.Chosse{
+    .contentbox{
+        margin: 80px 0;
+        @include flex();
+        .contentleft{
+            max-width: 500px;
+            .contentflex{
+                @include flex();
+                margin: 20px 0;
+                .icon{
+                    width: 80px;
+                    height: 80px;
+                    background-color: rgba($main-color, $alpha: 0.6);
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 120px;
+                }
+                .contenttext{
+                    max-width: 350px;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .contentright{
+            max-width: 600px;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+.testimonialflex{
+    @include flex();
+    .box{
+        max-width: 500px;
+        padding: 25px;
+        border:1px solid rgba($color: #000000, $alpha: 0.2);
+        border-radius: 4px;
+        box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: 0.2);
+        .imagebox{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: $main-color;
+            margin: 20px 0;
+        }
+        .content{
+            span{
+                color: $main-color;
+                margin-bottom: 10px;
+                display: inline-block;
+                &:last-of-type{
+                    margin-left: 25px;
+                }
+
+            }
+        }
+    }
+}
+.stepsgrid{
+    @include grid($column-gap:0px);
+    margin-top: 50px;
+    .boxcontent{
+        padding: 70px 45px;
+        border:1px solid rgba($color: #000000, $alpha: 0.2);
+        h4{
+            color:$main-color;
+
+        }
+        h5{
+            margin: 10px 0;
+        }
+    }
+}
+.getstarted{
+    padding: 50px 0;
+    background: url("image/dollar-gill-pJgIf6CfVkU-unsplash.jpg") center center/cover;
+    color: white;
+    text-align: center;
+
+}
+.quastion-grid{
+    @include flex($justify : center);
+    .quastionbox{
+        max-width: 450px;
+        box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 4px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            transform: translateY(-20px);
+        }
+        .imagebox{
+                max-width: 450px;
+                height: 180px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+            }
+        }
+        .content{
+            padding: 20px;
+            .header-span{
+                margin: 20px 0;
+                span{
+                    &:last-child{
+                        margin-left: 20px;
+                    }
+                }
+            }
+            h4{
+                margin-bottom: 20px;
+            }
+            .footer-span{
+                padding:20px 0;
+                span{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+.btn1{
+    margin: 50px auto;
+    text-align: center;
+    display: block;
+}
+footer{
+    background-color: $secondary;
+    color: white;
+    .container{
+        @include flex()
+    }
+}

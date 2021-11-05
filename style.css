@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+p, a, span {
+  font-size: 16px; }
+
+h4 {
+  font-size: 20.8px; }
+
+h3 {
+  font-size: 27.04px; }
+
+h2 {
+  font-size: 35.152px; }
+
+h1 {
+  font-size: 45.6976px; }
+
+.btn {
+  width: 154px;
+  height: 62px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 62px;
+  background-color: #ec5252;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ec5252;
+  transition: background-color 0.3s;
+  font-weight: 700;
+  display: inline-block; }
+  .btn:hover {
+    background-color: #fff;
+    color: #ec5252; }
+
+.secondary-btn {
+  color: #ec5252;
+  font-weight: 700; }
+  .secondary-btn .fas {
+    font-size: 20px;
+    margin-left: 10px; }
+
+p, a, span {
+  font-size: 16px; }
+
+h4 {
+  font-size: 20.8px; }
+
+h3 {
+  font-size: 27.04px; }
+
+h2 {
+  font-size: 35.152px; }
+
+h1 {
+  font-size: 45.6976px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'; }
+
+@media screen and (max-width: 767px) {
+  body p, body a, body span {
+    font-size: 14px; }
+  body h4 {
+    font-size: 18.2px; }
+  body h3 {
+    font-size: 23.66px; }
+  body h2 {
+    font-size: 30.758px; }
+  body h1 {
+    font-size: 39.9854px; } }
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 20px; }
+
+.title_top {
+  max-width: 400px;
+  margin: 50px auto; }
+  .title_top p, .title_top h4, .title_top span {
+    text-align: center; }
+  .title_top span {
+    display: block;
+    color: #ec5252;
+    text-transform: uppercase; }
+  .title_top h4 {
+    margin: 10px 0; }
+
+header {
+  background-image: url("image/nick-gavrilov-8pU-cOs5z3Q-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  color: #fff;
+  /*Header Bottom*/ }
+  header .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /*Burger Menu*/ }
+    header .header-top .bars {
+      width: 34px;
+      height: 34px;
+      cursor: pointer; }
+      header .header-top .bars div {
+        transition: width 0.3s;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        margin: 8px 0; }
+        header .header-top .bars div:nth-child(2) {
+          width: 60%;
+          right: 0; }
+      header .header-top .bars:hover div:nth-child(2) {
+        width: 100%; }
+  header .header-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: 500px; }
+    header .header-bottom .content h2 {
+      max-width: 460px; }
+    header .header-bottom .content p {
+      margin: 20px 0;
+      max-width: 460px; }
+
+/*Services*/
+.services {
+  padding: 50px 0;
+  background-color: #f7f7f7; }
+  .services .service_ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px; }
+    .services .service_ .service {
+      text-align: center; }
+      .services .service_ .service .icon {
+        margin: auto;
+        line-height: 130px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ec5252; }
+
+.feature-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; }
+  .feature-grid .featurebox {
+    width: 350px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer; }
+    .feature-grid .featurebox:hover {
+      transform: translateY(-20px); }
+    .feature-grid .featurebox .imagebox {
+      width: 350px;
+      height: 180px; }
+      .feature-grid .featurebox .imagebox img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px; }
+    .feature-grid .featurebox .content {
+      padding: 20px; }
+      .feature-grid .featurebox .content .header-span {
+        margin: 20px 0; }
+        .feature-grid .featurebox .content .header-span span:last-child {
+          margin-left: 20px; }
+      .feature-grid .featurebox .content h4 {
+        margin-bottom: 20px; }
+      .feature-grid .featurebox .content .footer-span {
+        padding: 20px 0; }
+        .feature-grid .featurebox .content .footer-span span {
+          margin-right: 20px; }
+
+/*Choose*/
+.Chosse .contentbox {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; }
+  .Chosse .contentbox .contentleft {
+    max-width: 500px; }
+    .Chosse .contentbox .contentleft .contentflex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 20px 0; }
+      .Chosse .contentbox .contentleft .contentflex .icon {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(236, 82, 82, 0.6);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 120px; }
+      .Chosse .contentbox .contentleft .contentflex .contenttext {
+        max-width: 350px; }
+        .Chosse .contentbox .contentleft .contentflex .contenttext p {
+          font-size: 14px; }
+  .Chosse .contentbox .contentright {
+    max-width: 600px; }
+    .Chosse .contentbox .contentright img {
+      max-width: 100%; }
+
+.testimonialflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; }
+  .testimonialflex .box {
+    max-width: 500px;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); }
+    .testimonialflex .box .imagebox {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #ec5252;
+      margin: 20px 0; }
+    .testimonialflex .box .content span {
+      color: #ec5252;
+      margin-bottom: 10px;
+      display: inline-block; }
+      .testimonialflex .box .content span:last-of-type {
+        margin-left: 25px; }
+
+.stepsgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 0px;
+  row-gap: 30px;
+  margin-top: 50px; }
+  .stepsgrid .boxcontent {
+    padding: 70px 45px;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+    .stepsgrid .boxcontent h4 {
+      color: #ec5252; }
+    .stepsgrid .boxcontent h5 {
+      margin: 10px 0; }
+
+.getstarted {
+  padding: 50px 0;
+  background: url("image/dollar-gill-pJgIf6CfVkU-unsplash.jpg") center center/cover;
+  color: white;
+  text-align: center; }
+
+.quastion-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; }
+  .quastion-grid .quastionbox {
+    max-width: 450px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer; }
+    .quastion-grid .quastionbox:hover {
+      transform: translateY(-20px); }
+    .quastion-grid .quastionbox .imagebox {
+      max-width: 450px;
+      height: 180px; }
+      .quastion-grid .quastionbox .imagebox img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px; }
+    .quastion-grid .quastionbox .content {
+      padding: 20px; }
+      .quastion-grid .quastionbox .content .header-span {
+        margin: 20px 0; }
+        .quastion-grid .quastionbox .content .header-span span:last-child {
+          margin-left: 20px; }
+      .quastion-grid .quastionbox .content h4 {
+        margin-bottom: 20px; }
+      .quastion-grid .quastionbox .content .footer-span {
+        padding: 20px 0; }
+        .quastion-grid .quastionbox .content .footer-span span {
+          margin-right: 20px; }
+
+.btn1 {
+  margin: 50px auto;
+  text-align: center;
+  display: block; }
+
+footer {
+  background-color: #232025;
+  color: white; }
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; }
+
+/*# sourceMappingURL=style.css.map */
